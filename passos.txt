@@ -1,0 +1,3 @@
+criar sistema de votação recebendo id_candidato, id_voter, ano;
+voter é a tabela que contém os eleitores;
+na votação após digitar o numero do candidato deve aparecer sua foto, depois disso é que o devemos confirmar e então o voto será computado; 
