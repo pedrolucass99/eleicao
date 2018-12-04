@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,47 +13,21 @@
   <body>
     <div class="container">
       <h2>Passport Appointment System</h2><br/>
-      <form method="post" action="{{url('parties')}}" enctype="multipart/form-data">
+      <form method="post" action="{{url('elections')}}" enctype="multipart/form-data">
         @csrf
-
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
-            <label for="Nome">Nome:</label>
-            <input type="text" class="form-control" name="nome">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" name="name">
           </div>
-        </div>
-        <div class="row">
+        </div>   
+           <div class="row">
           <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="Numerodopartido">Numero do partido:</label>
-              <input type="text" class="form-control" name="numerodopartido">
-            </div>
+          <div class="form-group col-md-4">
+            <label for="ano">Ano:</label>
+            <input type="date" class="form-control" name="ano">
           </div>
-        <div class="row">
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label for="Sigla">sigla:</label>
-              <input type="text" class="form-control" name="sigla">
-            </div>
-          </div>
-
-          <div class="col-md-4"></div>
-            <div class="form-group col-md-4">
-              <label>Eleição:</label>
-              <select name="election_id">
-                <option value="">Selecionar</option>
-                @foreach ($elections as $election)
-                <option value="{{$election['id']}}">
-                  {{$election['nome']}}
-                </option>
-                @endforeach
-                
-              </select>
-            </div>
-          </div>
-          
-    
         </div>
         <div class="row">
           <div class="col-md-4"></div>

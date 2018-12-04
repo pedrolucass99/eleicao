@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Election;
 
 class PartyController extends Controller
 {
@@ -18,6 +19,7 @@ public function index()
         return view('parties/index',compact('parties'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +27,9 @@ public function index()
      */
       public function create()
     {
-        return view('parties/create');
+        $elections=\App\Election::all();
+        return view('parties/create',compact('elections'));
+        // return view('parties/create');
     }
 
     /**

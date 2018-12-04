@@ -11,7 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>  
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="border-style: solid;
+    border-right-color: coral;">
       <h2>Passport Appointment System</h2><br/>
       <form method="post" action="{{url('candidates')}}" enctype="multipart/form-data">
         @csrf
@@ -31,19 +32,18 @@
           </div>
           <div class="row">
           <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <input type="file" name="imagem">    
-          </div>
-          <div class="row">
-          <div class="col-md-4"></div>
             <div class="form-group col-md-4">
               <label for="party_id">ID do partido:</label>
               <input type="text" class="form-control" name="party_id">
             </div>
           </div>
+          <div class="col-md-4"></div>
+          <div class="form-group col-md-4">
+            <input type="file" name="imagem">    
+          </div>
         <div class="row">
           <div class="col-md-4"></div>
-          <div class="form-group col-md-4" style="margin-top:60px">
+          <div class="form-group col-md-4" style="margin-top:60px;">
             <button type="submit" class="btn btn-success">Submit</button>
           </div>
         </div>
